@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 99px;
+}
+
+/* ─── App Shell ─── */
+.app-wrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-image {
+  position: fixed;
+  inset: 0;
+  background: url('/bg.jpg') center / cover no-repeat;
+  z-index: 0;
+  will-change: transform;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(8, 28, 70, 0.28) 0%,
+    rgba(15, 55, 115, 0.18) 40%,
+    rgba(8, 30, 80, 0.38) 100%
+  );
+  z-index: 1;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 110px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ─── Glassmorphism Base ─── */
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.glass-dark {
+  background: rgba(8, 30, 75, 0.35);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(100, 160, 255, 0.2);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ─── Loading ─── */
+.loading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  gap: 18px;
+}
+
+.spinner-ring {
+  width: 52px;
+  height: 52px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+}
+
+.loading-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Fade-in ─── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fade-up-1 { animation-delay: 0.05s; }
+.fade-up-2 { animation-delay: 0.12s; }
+.fade-up-3 { animation-delay: 0.19s; }
+.fade-up-4 { animation-delay: 0.26s; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 90px 16px 60px;
+    gap: 16px;
+  }
+}
