@@ -15,7 +15,7 @@ function App() {
   const [forecast, setForecast] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [unit, setUnit] = useState('metric') // 'metric' | 'imperial'
+  const [unit, setUnit] = useState('metric') 
 
   const fetchByCity = async (city, u = unit) => {
     setLoading(true)
