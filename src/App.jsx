@@ -7,7 +7,7 @@ import HourlyForecast from './components/HourlyForecast'
 import ForecastSection from './components/ForecastSection'
 import ErrorCard from './components/ErrorCard'
 
-const API_KEY = '71d8fad410ca411ea4b19189e9409038'
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY
 const BASE_URL = 'https://api.openweathermap.org/data/2.5'
 
 function App() {
