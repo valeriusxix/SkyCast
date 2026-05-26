@@ -1,0 +1,146 @@
+/* Float animation for the weather icon */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.weatherMainCard {
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.locationText {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+.dateTime {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.02em;
+  font-style: italic;
+  margin: 0;
+}
+
+.tempRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.temp {
+  font-family: 'Raleway', sans-serif;
+  font-size: 6rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
+  letter-spacing: -0.02em;
+}
+
+.tempUnit {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 12px;
+}
+
+.description {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.highLow {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  gap: 14px;
+}
+
+.highLowItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.weatherIcon {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 8px 24px rgba(144, 202, 249, 0.5));
+  animation: float 4s ease-in-out infinite;
+}
+
+.sunriseSunset {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.sunItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.sunEmoji {
+  font-size: 1rem;
+}
+
+.sunLabel {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sunTime {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sunDivider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,109 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.sectionTitle {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-left: 4px;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.dayLabel {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dateLabel {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.icon {
+  width: 58px;
+  height: 58px;
+  filter: drop-shadow(0 4px 12px rgba(144, 202, 249, 0.5));
+}
+
+.desc {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+.tempRow {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 2px;
+}
+
+.high {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.low {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+}
+
+.popBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(100, 160, 255, 0.18);
+  border: 1px solid rgba(100, 160, 255, 0.25);
+  border-radius: 99px;
+  padding: 3px 10px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #90caf9;
+}

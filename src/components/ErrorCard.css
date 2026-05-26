@@ -1,0 +1,41 @@
+/* ErrorCard.css */
+.card {
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 80, 80, 0.12);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 100, 100, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(200, 40, 40, 0.1);
+}
+
+.icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffcdd2;
+  letter-spacing: 0.01em;
+}
+
+.message {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: rgba(255, 180, 180, 0.8);
+  text-transform: capitalize;
+}
